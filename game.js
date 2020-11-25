@@ -707,7 +707,7 @@ function changeCond(event, elem){
             break;
 
         case 'Restart':
-        game_mode = "Start";
+            game_mode = "Start";
             elem.innerText = 'Pause';
             document.getElementById('score').innerText = 'Score: 0';
             startInterval();
