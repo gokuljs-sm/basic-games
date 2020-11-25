@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <title>Game</title>
+        <style>
+            table, th, td {
+                border: 1px solid #D1D0CE;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body style="margin: 0px auto; height: auto; width: auto;">
+        <center><h3>Snake game</h3></center>
+        <center><p><button onclick="changeCond(event, this)" id="gameplay">Pause</button></p></center>
+        <center><p id="score">Score: 0</p></center>
+
+        <div id="game-location" style="margin: 0px auto; max-width: 400px; display: grid; place-items: center;"></div>
+
+        <div style="margin: 0px auto; max-width: 400px; display: grid; place-items: center;">
+            <div style="margin: 10px 10px 10px 10px;">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><button onclick="changeMove(event, 38)" style="font-size: 24px;">&#8593;</button></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="changeMove(event, 37)" style="font-size: 24px;">&#8592;</button></td>
+                        <td></td>
+                        <td><button onclick="changeMove(event, 39)" style="font-size: 24px;">&#8594;</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button onclick="changeMove(event, 40)" style="font-size: 24px;">&#8595;</button></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div style="margin: 0px auto; max-width: 400px; display: grid; place-items: center;">
+            <div style="margin: 5px 5x 5px 5px">
+                <label for="set-food-score">Change food score: </label>
+                <select id="set-food-score" onchange="change_food_score(event, this)">
+                    <option value="10">10</option>
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="margin: 10px auto; max-width: 400px; display: grid; place-items: center;">
+            <div style="margin: 5px 5x 5px 5px">
+                <label for="set-food-score">Change winning score: </label>
+                <select id="set-food-score" onchange="change_winning_score(event, this)">
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                    <option value="10000">10000</option>
+                    <option value="100000">100000</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="margin: 0px auto; max-width: 400px; display: grid; place-items: center;">
+            <div style="margin: 5px 5x 5px 5px">
+                <label for="set-food-score">Change speed: </label>
+                <select id="set-food-score" onchange="change_speed(event, this)">
+                    <option value="500">20%</option>
+                    <option value="400">40%</option>
+                    <option value="300">60%</option>
+                    <option value="200">80%</option>
+                    <option value="100">100%</option>
+                </select>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>
