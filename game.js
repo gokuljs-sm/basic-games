@@ -1,3 +1,8 @@
+/**
+    * @Auther : Gokul J S (youovideo.com, greenpark809@gmail.com) 
+    ** Don't change this comment.
+*/
+
 var a = document.createElement('table');
 document.getElementById('game-location').appendChild(a);
 
